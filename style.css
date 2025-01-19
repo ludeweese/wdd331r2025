@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background-color: #52846a; 
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  main {
+    padding: 2em;
+  }
+  
+  /* Image styling */
+        img {
+            border-radius: 50%; /* Makes the image circular */
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Ensures the image fits nicely in the circle */
+            margin-top: 10px;
+        }

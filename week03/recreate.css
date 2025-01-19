@@ -1,0 +1,156 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Disable horizontal scroll */
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    background-color: #333;
+    padding: 10px 0;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  /* Amazon Search Bar */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .search-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 25px;
+    width: 250px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input::placeholder {
+    color: #aaa;
+  }
+  
+  .search-input:focus {
+    border-color: orange;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
+  }
+  
+  .search-input:focus::placeholder {
+    color: #666;
+  }
+  
+  /* Banner Video simillar to BYUI */
+  .banner-video {
+    position: relative;
+    height: 350px; /* Adjusted height */
+    width: 100%;
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .overlay h1 {
+    font-size: 3rem; 
+    margin-bottom: 10px;
+    color: #050248; 
+  }
+  
+  .overlay p {
+    font-size: 1.5rem;
+    font-size: 1.5rem; 
+    color: #08062f; 
+  }
+    
+  
+  /* Intro Text */
+  .intro-text {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Slider */
+  .slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Hide anything outside the container */
+    margin: 0 auto; /* Centering the slider */
+  }
+  
+  .slider {
+    display: flex;
+    animation: slide 72s infinite linear; /* Animation duration to scroll slowly */
+    gap: 10px; /* Add space between slides */
+  }
+  
+  .slide {
+    flex: 0 0 auto;
+    width: calc(12.5% - 10px); /* Subtract the gap to ensure 8 slides fit perfectly */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto; /* Ensure the images maintain their aspect ratio */
+    display: block;
+    border-radius: 5px; /* Optional: Add rounded corners for a smoother look */
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Move the slider by 100% of its width */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .slider-container {
+      width: 100%;
+    }
+  }
+  
