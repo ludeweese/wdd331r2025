@@ -1,156 +1,260 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    overflow-x: hidden; /* Disable horizontal scroll */
-  }
-  
-  /* Navigation Bar */
-  .navbar {
-    background-color: #333;
-    padding: 10px 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Responsive Navigation */
+@media (max-width: 480px) {
   .navbar ul {
-    list-style-type: none;
-    text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
   
   .navbar ul li {
-    display: inline;
-    margin: 0 15px;
+      display: block;
+      margin: 10px 0;
   }
-  
-  .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  /* Amazon Search Bar */
-  .search-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
-  .search-input {
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    width: 250px;
-    outline: none;
-    transition: all 0.3s ease;
-  }
-  
-  .search-input::placeholder {
-    color: #aaa;
-  }
-  
-  .search-input:focus {
-    border-color: orange;
-    box-shadow: 0 0 5px rgba(255, 165, 0, 0.7);
-  }
-  
-  .search-input:focus::placeholder {
-    color: #666;
-  }
-  
-  /* Banner Video simillar to BYUI */
-  .banner-video {
-    position: relative;
-    height: 350px; /* Adjusted height */
-    width: 100%;
-    overflow: hidden; /* Hide overflow */
-  }
-  
-  .video-background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 1;
-  }
-  
+}
+
+/* Amazon Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 14px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  width: 80%; /* Make it fit smaller screens */
+  max-width: 250px;
+}
+
+/* Banner Video */
+.banner-video {
+  position: relative;
+  height: 250px; /* Smaller height for mobile */
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.overlay h1 {
+  font-size: 2rem; /* Reduce size for smaller screens */
+  margin-bottom: 5px;
+  color: #050248;
+}
+
+.overlay p {
+  font-size: 1rem;
+  color: #08062f;
+}
+
+/* Adjust text for very small screens */
+@media (max-width: 480px) {
   .overlay h1 {
-    font-size: 3rem; 
-    margin-bottom: 10px;
-    color: #050248; 
+      font-size: 1.5rem;
   }
-  
+
   .overlay p {
-    font-size: 1.5rem;
-    font-size: 1.5rem; 
-    color: #08062f; 
+      font-size: 0.9rem;
   }
-    
-  
-  /* Intro Text */
-  .intro-text {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* Slider */
-  .slider-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden; /* Hide anything outside the container */
-    margin: 0 auto; /* Centering the slider */
-  }
-  
-  .slider {
-    display: flex;
-    animation: slide 72s infinite linear; /* Animation duration to scroll slowly */
-    gap: 10px; /* Add space between slides */
-  }
-  
+}
+
+/* Intro Text */
+.intro-text {
+  padding: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Slider */
+.slider-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  animation: slide 40s infinite linear; /* Adjust speed for small screens */
+  gap: 5px;
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: calc(25% - 5px); /* Show fewer images on small screens */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+display: flex;
+flex-wrap: wrap; /* Allow wrapping on smaller screens */
+justify-content: center; /* Center items horizontally */
+gap: 20px; /* Space between the boxes */
+margin: 20px 0;
+}
+
+/* Testimonial Box */
+.testimonial-box {
+background-color: #ffffff;
+border: 1px solid #ddd;
+padding: 40px 20px;
+width: 300px;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center; /* Center content inside the box */
+position: relative; /* So we can position the quote mark inside the box */
+}
+
+.quote-mark {
+font-size: 100px; /* Large quote mark */
+color: #09361c;
+position: absolute;
+top: 10px; /* Position it at the top of the box */
+left: 50%;
+transform: translateX(-50%); /* Center the quote mark horizontally */
+}
+
+.testimonial-comment {
+font-size: 16px;
+color: #555;
+line-height: 1.5;
+margin-top: 60px; /* Add space between the quote mark and the comment */
+}
+
+.testimonial-author {
+display: flex;
+flex-direction: column; /* Stack the image and name vertically */
+align-items: center; /* Center align both items */
+margin-top: 20px;
+}
+.testimonial-introduction {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.testimonial-introduction h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.testimonial-introduction p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+
+/* Testimonial Box Author Photo */
+.author-photo {
+width: 50px;
+height: 50px;
+background-color: #09361c;
+border-radius: 50%;
+margin-bottom: 10px; /* Space between the photo and the name */
+overflow: hidden; /* Ensure the image stays within the circle */
+}
+
+.author-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ensure the image covers the circle without distorting */
+}
+
+/* For Large Views (Side by side) */
+@media (min-width: 1024px) {
+.testimonial-container {
+  flex-direction: row; /* Align boxes side by side */
+}
+}
+
+/* For Medium and Smaller Views (Stacked on top of each other) */
+@media (max-width: 1023px) {
+.testimonial-container {
+  flex-direction: column; /* Stack boxes vertically */
+  align-items: center; /* Center align the boxes */
+}
+}
+
+/* Adjust slider for very small screens */
+@media (max-width: 480px) {
   .slide {
-    flex: 0 0 auto;
-    width: calc(12.5% - 10px); /* Subtract the gap to ensure 8 slides fit perfectly */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+      width: calc(50% - 5px); /* Show only 2 images at a time */
   }
-  
-  .slide img {
-    width: 100%;
-    height: auto; /* Ensure the images maintain their aspect ratio */
-    display: block;
-    border-radius: 5px; /* Optional: Add rounded corners for a smoother look */
-  }
-  
-  @keyframes slide {
-    0% {
+}
+
+@keyframes slide {
+  0% {
       transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%); /* Move the slider by 100% of its width */
-    }
   }
-  
-  @media (max-width: 768px) {
-    .slider-container {
-      width: 100%;
-    }
+  100% {
+      transform: translateX(-100%);
   }
-  
+}
