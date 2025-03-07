@@ -49,21 +49,7 @@
     }
   }
   
-  /* Amazon Search Bar */
-  .search-container {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-  }
   
-  .search-input {
-    padding: 8px;
-    font-size: 14px;
-    border: 2px solid #ccc;
-    border-radius: 25px;
-    width: 80%; /* Make it fit smaller screens */
-    max-width: 250px;
-  }
   
   /* Banner Video */
   .banner-video {
@@ -96,12 +82,14 @@
   .overlay h1 {
     font-size: 2rem; /* Reduce size for smaller screens */
     margin-bottom: 5px;
-    color: #46fbbc;
-  }
+    color: #9f3909;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* White shadow effect */
+}
+  
   
   .overlay p {
     font-size: 1rem;
-    color: #78efb6;
+    color: #794907;
   }
   
   /* Adjust text for very small screens */
@@ -524,6 +512,56 @@
     text-decoration: underline;
   }
   
+  .testimonial-introduction {
+    border: 5px solid;
+    border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    border-image-slice: 1;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @keyframes rainbowBorder {
+    0% { border-image-source: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); }
+    16% { border-image-source: linear-gradient(45deg, orange, yellow, green, blue, indigo, violet, red); }
+    33% { border-image-source: linear-gradient(45deg, yellow, green, blue, indigo, violet, red, orange); }
+    50% { border-image-source: linear-gradient(45deg, green, blue, indigo, violet, red, orange, yellow); }
+    66% { border-image-source: linear-gradient(45deg, blue, indigo, violet, red, orange, yellow, green); }
+    83% { border-image-source: linear-gradient(45deg, indigo, violet, red, orange, yellow, green, blue); }
+    100% { border-image-source: linear-gradient(45deg, violet, red, orange, yellow, green, blue, indigo); }
+  }
+  
+  .testimonial-introduction {
+    animation: rainbowBorder 5s infinite linear;
+  }
+  
+  /* Style for video on small screens */
+@media (max-width: 768px) {
+  .video-container {
+    display: block; /* Ensure the video is shown */
+    width: 100%; /* Make sure the video is responsive */
+    height: auto;
+  }
+  .video-container img {
+    display: none; /* Hide the image fallback */
+  }
+}
+/* For large screens */
+@media (min-width: 769px) {
+  .slider {
+    transition: transform 1s ease-in-out; /* Slower speed for large screens */
+  }
+}
+
+/* For small screens */
+@media (max-width: 768px) {
+  .slider {
+    transition: transform 0.1s ease-in-out; /* Faster speed for small screens */
+  }
+}
+
+
   
   
   
