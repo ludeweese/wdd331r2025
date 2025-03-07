@@ -171,7 +171,7 @@
   
   .testimonial-comment {
     font-size: 16px;
-    color: #555;
+    color: #4e4c4c;
     line-height: 1.5;
     margin-top: 60px; /* Add space between the quote mark and the comment */
   }
@@ -181,6 +181,7 @@
     flex-direction: column; /* Stack the image and name vertically */
     align-items: center; /* Center align both items */
     margin-top: 20px;
+    color:#073735;
   }
   
   /* Testimonial Introduction */
