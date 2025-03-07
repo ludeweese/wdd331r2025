@@ -276,110 +276,7 @@
     height: 100vh; /* Full viewport height to center vertically */
   }
   
-  /* Text container with a box around it */
-  .text-container {
-    padding: 20px;
-    border: 2px solid #09361c; /* Border to create a box around the text */
-    border-radius: 8px; /* Rounded corners for the box */
-    background-color: #f4f4f4; /* Light background color for the text box */
-    width: 40%; /* Adjust width of the text box */
-    text-align: center; /* Center text inside the box */
-    margin-bottom: 40px;
-  }
-  
-  /* Circle container */
-  .circle-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: rotateClockwise 20s linear infinite;
-  }
-  
-  /* Center circle */
-  .center-circle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100px;
-    height: 100px;
-    background-color: #09361c;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 16px;
-    overflow: hidden; /* Prevent image from overflowing */
-  }
-  
-  .center-circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%; /* Keep image inside the circle */
-  }
-  
-  .center-circle div {
-    position: absolute;
-    color: white;
-    font-size: 16px;
-    z-index: 1; /* Ensure text appears above the image */
-  }
-  
-  /* Circle logos */
-  .circle {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #09361c;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 14px;
-    overflow: hidden; /* Ensures images do not exceed the circle */
-  }
-  
-  .circle img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images fully cover the circle */
-    border-radius: 50%; /* Keeps the image inside the circular shape */
-  }
-  
-  .circle-1 {
-    transform: rotate(0deg) translateX(120px);
-  }
-  .circle-2 {
-    transform: rotate(51.43deg) translateX(120px);
-  }
-  .circle-3 {
-    transform: rotate(102.86deg) translateX(120px);
-  }
-  .circle-4 {
-    transform: rotate(154.29deg) translateX(120px);
-  }
-  .circle-5 {
-    transform: rotate(205.71deg) translateX(120px);
-  }
-  .circle-6 {
-    transform: rotate(257.14deg) translateX(120px);
-  }
-  .circle-7 {
-    transform: rotate(308.57deg) translateX(120px);
-  }
-  
-  @keyframes rotateClockwise {
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
+
   /* Responsive Adjustments for Mobile */
   @media (max-width: 768px) {
     .text-and-circles {
@@ -468,37 +365,33 @@
     border-radius: 25px; /* Rounded corners */
     text-align: center;
     position: relative;
-    border: 12px solid transparent;
-    transition: border 0.3s ease-in-out;
     margin-bottom: 20px; /* Space before the text */
-  
+    z-index: 1; /* Ensure it stays above the pseudo-element */
+    color: white; /* Makes all text white */
+    
     &::before {
       content: "";
       position: absolute;
-      top: -15px;
-      left: -15px;
-      right: -15px;
-      bottom: -15px;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
       border-radius: 30px;
-      border: 15px solid transparent;
-      background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+      padding: 5px; /* Creates the border effect */
+      background: linear-gradient(45deg, red, rgb(170, 111, 2), rgb(78, 140, 115), rgb(4, 16, 4), rgb(2, 59, 86), rgb(56, 3, 30), violet);
       background-size: 400% 400%;
-      z-index: -1;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
+      z-index: -1; /* Behind the content box */
+      animation: rainbow-border 3s linear infinite;
     }
-  
-    &:hover::before {
-      opacity: 1;
-      animation: rainbow-border 2s linear infinite;
-    }
-  }
-  
-  @keyframes rainbow-border {
+}
+
+@keyframes rainbow-border {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-  }
+}
+
+
   
   .text-container a {
     color: #0073e6; /* Web Designer Depot branding color */
