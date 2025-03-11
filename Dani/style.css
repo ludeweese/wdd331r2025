@@ -48,8 +48,13 @@
       margin: 10px 0;
     }
   }
+  .music {
+    color: rgb(85, 2, 71) !important;
+    font-size: 20px !important;
+    text-shadow: 2px 2px 4px rgba(247, 242, 242, 0.5); /* Adds a soft shadow */
+  }
   
-  
+    
   
   /* Banner Video */
   .banner-video {
