@@ -3,14 +3,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
+}
+
+.main-content {
+  background: linear-gradient(to bottom right, #c4e2ce, #b4c7bc, #e9f9f0); 
+  padding: 1em;
+  min-height: 100vh;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fbfcfc;
   overflow-x: hidden;
+  font-size: 85%;
+  margin: 0;
+  padding: 1em;
 }
-
 
 /* Navigation Bar */
 .navbar {
@@ -226,7 +235,12 @@ body {
   max-width: 800px;
   width: 100%;
   padding: 20px;
+  margin: 0 auto;
 }
+
+
+
+
 
 /* Testimonial Box Author Photo */
 .author-photo {
@@ -280,21 +294,21 @@ body {
 .text-and-circles {
   display: flex;
   flex-direction: column; /* Stack text and circle vertically */
-  align-items: center; /* Center both elements horizontally */
-  justify-content: center; /* Center vertically */
+  align-items: center; 
+  justify-content: center; 
   margin-top: 50px;
-  gap: 20px; /* Space between text box and circle */
-  height: 100vh; /* Full viewport height to center vertically */
+  gap: 20px; 
+  height: 100vh; 
 }
 
 /* Text container with a box around it */
 .text-container {
   padding: 20px;
-  border: 2px solid #09361c; /* Border to create a box around the text */
-  border-radius: 8px; /* Rounded corners for the box */
-  background-color: #f4f4f4; /* Light background color for the text box */
-  width: 40%; /* Adjust width of the text box */
-  text-align: center; /* Center text inside the box */
+  border: 2px solid #09361c; 
+  border-radius: 8px; 
+  background-color: #f4f4f4; 
+  width: 40%; 
+  text-align: center; 
   margin-bottom: 40px;
 }
 
@@ -324,7 +338,7 @@ body {
   align-items: center;
   border-radius: 50%;
   font-size: 16px;
-  overflow: hidden; /* Prevent image from overflowing */
+  overflow: hidden; 
 }
 
 .center-circle img {
@@ -338,7 +352,7 @@ body {
   position: absolute;
   color: white;
   font-size: 16px;
-  z-index: 1; /* Ensure text appears above the image */
+  z-index: 1; 
 }
 
 /* Circle logos */
@@ -353,14 +367,14 @@ body {
   align-items: center;
   border-radius: 50%;
   font-size: 14px;
-  overflow: hidden; /* Ensures images do not exceed the circle */
+  overflow: hidden; 
 }
 
 .circle img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures images fully cover the circle */
-  border-radius: 50%; /* Keeps the image inside the circular shape */
+  object-fit: cover; 
+  border-radius: 50%; 
 }
 
 .circle-1 {
@@ -394,11 +408,11 @@ body {
 /* Responsive Adjustments for Mobile */
 @media (max-width: 768px) {
   .text-and-circles {
-    gap: 15px; /* Less gap on smaller devices */
+    gap: 15px; 
   }
 
   .text-container {
-    width: 80%; /* Take up most of the screen on smaller devices */
+    width: 80%; 
     padding: 15px;
   }
 
@@ -415,20 +429,20 @@ body {
 .testimonial-introduction,
 .testimonial-container,
 .text-and-circles {
-    margin-bottom: 20px; /* Adjust this value as needed */
+    margin-bottom: 20px; 
 }
 /* Specifically target testimonial introduction */
 .testimonial-introduction {
-  margin-top: 20px; /* Adjust this value as needed */
-  margin-bottom: 20px; /* Adjust this value as needed */
-  height: auto; /* Remove fixed height */
-  padding: 20px 0; /* Add padding to the top and bottom */
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  height: auto; 
+  padding: 20px 0; 
 }
 
 .testimonial-introduction .text-container {
   max-width: 800px;
-  width: 90%; /* Occupy a bit more width on smaller screens */
-  margin: 0 auto; /* Center the text container */
+  width: 90%; 
+  margin: 0 auto; 
   padding: 20px;
   border: 2px solid #09361c;
   border-radius: 8px;
@@ -439,22 +453,22 @@ body {
 
 /* Specifically target text and circles */
 .text-and-circles {
-  margin-top: 20px; /* Adjust this value as needed */
-  margin-bottom: 20px; /* Adjust this value as needed */
-  height: auto; /* Remove fixed height */
-  padding: 20px 0; /* Add padding to the top and bottom */
+  margin-top: 20px; 
+  margin-bottom: 20px; 
+  height: auto; 
+  padding: 20px 0; 
 }
 
 /* Responsive adjustments for text and circles */
 @media (max-width: 768px) {
   .text-and-circles {
-      flex-direction: column; /* Stack vertically on small screens */
-      align-items: center;  /* Center horizontally */
-      gap: 20px; /* Adjust spacing between text and circle */
+      flex-direction: column; 
+      align-items: center;  
+      gap: 20px; 
   }
 
   .text-container {
-      width: 90%; /* Make the text container wider */
+      width: 90%; 
   }
 }
 
@@ -476,12 +490,12 @@ body {
   width: 300px;
   padding: 20px;
   background-color: white;
-  border-radius: 25px; /* Rounded corners */
+  border-radius: 25px; 
   text-align: center;
   position: relative;
   border: 12px solid transparent;
   transition: border 0.3s ease-in-out;
-  margin-bottom: 20px; /* Space before the text */
+  margin-bottom: 20px; 
 
   &::before {
     content: "";
@@ -512,7 +526,7 @@ body {
 }
 
 .text-container a {
-  color: #0073e6; /* Web Designer Depot branding color */
+  color: #0073e6;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease-in-out;
@@ -520,9 +534,82 @@ body {
 }
 
 .text-container a:hover {
-  color: #ff4081; /* A vibrant hover effect */
+  color: #ff4081;
   text-decoration: underline;
 }
+
+/*tool tip-week 11*/
+.image-row {
+  display: flex;
+  gap: 5px; /* Added px to the gap */
+  justify-content: center; /* Center images horizontally */
+}
+
+.image {
+  position: relative;
+  width: 150px; 
+  height: 150px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  margin: 5px; 
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.tooltip {
+  position: absolute;
+  top: 50px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+  width: 150px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10; 
+}
+
+.image:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s; 
+}
+
+/*zoom in-week 11*/
+.zoom-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+  border-radius: 6px; 
+  margin: 0 auto; 
+}
+
+.zoom-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.zoom-image-container:hover img {
+  transform: scale(1.4); 
+}
+
 
 
 
