@@ -1145,6 +1145,59 @@ roottech-button .button-text:hover {
     z-index: 0;
   }
 
+
+  /* Responsive Progress section */
+
+/* Hide the mobile message by default */
+.mobile-message {
+    display: none;
+}
+
+/* Show the mobile message on small screens */
+@media (max-width: 768px) {
+    /* Display the mobile message */
+    .mobile-message {
+        display: block;
+        margin-top: 20px;
+    }
+
+    /* "Working on mobile?" text */
+    .mobile-message::before {
+        content: "Working on mobile?";
+        display: block;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    /* The description text */
+    .mobile-message::after {
+        content: "The FamilySearch Tree app makes it easy to add to, edit, or share your own family's history anywhere you can take a phone or tablet.";
+        display: block;
+        font-weight: normal;
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    /* The image */
+    .mobile-message {
+        background: url('./images/mobile.png') no-repeat center;
+        background-size: contain;
+        width: 80%;
+        max-width: 250px;
+        height: 120px;
+        margin-top: 10px;
+    }
+}
+
+
+
+    /* Hide image on mobile */
+    .progress-image {
+        display: none;
+    }
+
+
   
 /* Links section */
 .links-section {
@@ -1195,16 +1248,53 @@ roottech-button .button-text:hover {
       margin-left: 5px;
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+ /* Responsive adjustments (Small View Styles ONLY - ADDITIONS) */
+@media (max-width: 768px) {
     .links-container {
-      flex-direction: column;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .links-column {
-      padding: 20px 0;
+        width: 100%;
+        text-align: center;
     }
-  }
+
+    .column-title {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        margin: 0; /* Remove top and bottom spacing */
+        padding: 10px 0; /* Add padding for visual separation */
+        border-bottom: 1px solid #ccc; /* Add horizontal line */
+        transition: background-color 0.3s ease; /* Add transition for hover effect */
+    }
+
+    .column-title:hover {
+        background-color: #f0f0f0; /* Gray hover effect */
+    }
+
+    .column-title::after {
+        content: "▼";
+        position: absolute;
+        right: 0;
+        top: 50%; /* Center the arrow vertically */
+        transform: translateY(-50%); /* Center the arrow vertically */
+        transition: transform 0.3s ease;
+    }
+
+    .links-column > a {
+        display: none;
+    }
+
+    .links-column:target > a {
+        display: block;
+    }
+
+    .links-column:target .column-title::after {
+        transform: translateY(-50%) rotate(180deg); /* Rotate the arrow */
+    }
+}
 
   /*download section*/
   .download-section {
@@ -1228,6 +1318,20 @@ roottech-button .button-text:hover {
     cursor: pointer;
   }
 
+
+  /* Responsive download section */
+/* @media (max-width: 768px) {
+    
+    .download-section::before {
+        content: "";
+        background-image: url("./images/mobile.png"); 
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+        display: block;
+        margin-top: 20px;
+    }
+} */
   /* Pre-footer section */
   .pre-footer-section {
     display: flex;
