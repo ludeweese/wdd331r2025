@@ -136,25 +136,114 @@ nav .right a.icon img:hover {
     border: 2px solid rgb(34, 139, 178);
 }
 
+/* Mobile responsiveness for nav bar*/
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    nav .left li {
-        margin-right: 0;
-        margin-bottom: 10px;
+    nav .left li:not(.logo) {
+        display: none;
     }
 
+    /* Smaller logo for mobile */
     nav .left .logo a img {
-        width: 30px;
+        height: 40px;
+        width: auto;
+    }
+
+    /* Target icons and hamburger specifically */
+    nav .right li.icon,
+    nav .right li.hamburger-toggle {
+        display: block !important;
+        margin-left: 5px;
+    }
+
+    nav .right li.hamburger-toggle {
+        margin-left: 10px;
+    }
+
+    .sign-in-btn,
+    .create-account-btn {
+        display: none;
+    }
+
+    /* Hamburger styles for mobile */
+    .hamburger-toggle button { /* Target the button inside the li */
+        display: block;
+        background: none; /* Remove background */
+        border: none; /* Remove border */
+        font-size: 1.5rem;
+        font-weight: bold; /* Make the text bold */
+        cursor: pointer;
+        padding: 0; /* Remove padding */
     }
 
     nav .right {
-        margin-top: 20px;
-        justify-content: center;
+        display: flex;
+        align-items: center;
     }
+
+    /* Icon styles for mobile */
+    .icon {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, border-radius 0.3s ease;
+        padding: 6px;
+    }
+
+    .icon img {
+        width: 22px !important;
+        height: 22px !important;
+        transition: color 0.3s ease;
+    }
+
+    .icon:hover {
+        background-color: #A8BFA7;
+        border-radius: 50%;
+        padding: 10px;
+    }
+
+    .icon:hover img {
+        color: white;
+    }
+
+    .icon::after {
+        content: attr(title);
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0s ease 0.3s;
+        width: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+
+    .icon:hover::after {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0s;
+    }
+}
+
+
+/* Large View (No Changes) */
+.hamburger-toggle {
+    display: none; /* Hide hamburger button on large screens */
 }
 
 /*Icons*/
@@ -254,6 +343,105 @@ nav .right a.icon img:hover {
 roottech-button .button-text:hover {
     color: #333; 
 }
+/* Mobile responsiveness for roottech-bar */
+@media (max-width: 768px) {
+    .roottech-bar {
+        background: linear-gradient(to right, rgb(52, 169, 247), rgb(16, 105, 169), rgb(97, 152, 235), rgb(2, 39, 93), rgb(61, 32, 105), purple, rgb(242, 116, 242), rgb(238, 17, 238));
+        padding: 15px 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .roottech-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .roottech-text {
+        margin: 10px 0;
+        font-size: 0.9rem;
+        order: 1;
+    }
+
+    .roottech-content > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; /* Vertically align logo and button */
+        width: 100%;
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .roottech-logo {
+        height: 30px;
+    }
+
+    .roottech-button {
+        background-color: black;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    .separator {
+        display: none !important;
+    }
+}
+
+
+/*ROOT MOBILE*/
+@media (max-width: 768px) {
+    .roottech-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Ensure text is at the top */
+    .roottech-text {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+        order: -1; /* Moves text to the top */
+    }
+
+    /* Align logo and button side by side */
+    .roottech-logo,
+    .roottech-button {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .roottech-logo {
+        height: 30px;
+        margin-right: 140px !important; /* Increased space between logo and button */
+    }
+
+    .roottech-button {
+        background-color: black;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        margin-top: -25px; /* Moves the button slightly up */
+    }
+
+    /* Hide separator on mobile */
+    .separator {
+        display: none !important;
+    }
+}
+
+
+
 
 /*Banner Section*/
 .banner-section {
@@ -344,6 +532,78 @@ roottech-button .button-text:hover {
     background-color: #555;
 }
 
+/*BANNER MOBILE*/
+@media (max-width: 768px) {
+    /* Remove background image on mobile */
+    .banner-section {
+        background-image: none;
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Add the banner image above the content */
+    .banner-section::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 200px; /* Adjust the height as needed */
+        background-image: url('./images/banner.webp'); 
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Ensure the text content is centered */
+    .banner-content {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* Ensure form appears below the banner */
+    .search-form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+        
+            /* Stack form fields */
+            .search-form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+        
+            .search-form input {
+                width: 100%;
+            }
+        
+            /* Adjust the search button */
+            .search-form button {
+                width: auto; 
+                padding: 10px 20px; 
+                align-self: flex-start; 
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        /* Add baby blue background */
+        .banner-content {
+            background-color: #ddedf5; 
+            padding: 20px; 
+            border-radius: 2px; 
+        }
+    
+        /* Ensure it covers full width */
+        .banner-section {
+            padding: 0; /* Remove extra padding */
+        }
+    }
+    
+
 /*links*/
 
 .link-section {
@@ -369,6 +629,10 @@ roottech-button .button-text:hover {
     .link-section {
         display: none;
     }
+
+    .section-separator {
+        display: none; /* Hides the separator */
+}
 }
 
 /*separator*/
@@ -411,6 +675,19 @@ roottech-button .button-text:hover {
 .underline {
     text-decoration: underline;
 }
+@media (max-width: 768px) {
+    /* Free section title and text */
+    .free-title {
+        font-size: 1.5rem; 
+        text-align: center; 
+    }
+
+    .free-text {
+        font-size: 0.9rem; 
+        text-align: center; 
+    }
+}
+
 
 /*family tree section*/
 .tree-section {
@@ -476,17 +753,29 @@ roottech-button .button-text:hover {
     color: black;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .tree-section {
-        flex-direction: column; 
+        flex-direction: column-reverse; /* Reverse the order, image comes first */
         align-items: center; 
     }
 
-    .tree-text, .tree-image {
+    .tree-text {
+        text-align: left; 
+        padding: 20px; 
+    }
+
+    .tree-image {
         text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .tree-image img {
+        max-width: 80%; 
+        height: auto; 
     }
 }
+
+
 
 
 /*records section*/
@@ -553,64 +842,82 @@ roottech-button .button-text:hover {
     color: black;
 }
 
+/* Responsive RECORDS SECTION */
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .records-section {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content */
     }
 
-    .records-image, .records-text {
-        text-align: center;
-        margin-left: 0;
+    .records-image {
+        text-align: center; 
+        margin-bottom: 20px; 
+    }
+
+    .records-image img {
+        max-width: 80%; 
+        height: auto; 
+    }
+
+    .records-text {
+        text-align: left; 
+        margin-left: 0; 
+        padding: 0 20px; 
     }
 }
 
-/*linked section*/
+
+
+/* linked section */
 .image-links-section {
     text-align: center;
     padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
-.image-container {
+.image-link-item {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px; 
 }
 
 .rounded-image {
-    width: 200px; 
-    height: 200px; 
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
-    margin: 0 30px; 
+    margin-bottom: 10px; 
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.link-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .image-link {
     text-decoration: underline;
     color: black;
-    margin: 0 44px; 
-    white-space: nowrap; 
+    white-space: nowrap;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for small view */
 @media (max-width: 768px) {
-    .image-container, .link-container {
-        flex-direction: column;
-        align-items: center;
+    .image-links-section {
+        flex-direction: column;  
+        align-items: center;     
     }
 
-    .rounded-image, .image-link {
-        margin: 10px 0;
+    .image-link-item {
+        margin: 20px 0; 
+    }
+
+    .rounded-image {
+        width: 150px; 
+        height: 150px;
+        margin-bottom: 15px; 
     }
 }
+
 
 /* begin Section */
 .begin-section {
@@ -663,13 +970,33 @@ roottech-button .button-text:hover {
 
 .begin-image {
     position: relative;
-    width: 40%; 
-    height: auto; 
+    width: 40%;
+    height: auto;
     z-index: 0;
-    object-fit: contain; 
+    object-fit: contain;
 }
 
-/*Help and learn section*/
+/* Responsive adjustments for small view */
+@media (max-width: 768px) {
+    .begin-section {
+        flex-direction: column-reverse; /* Reverse the order: image on top */
+        text-align: center; 
+    }
+
+    .begin-content {
+        margin-right: 0; 
+        text-align: center; 
+    }
+
+    .begin-image {
+        width: 70%; 
+        margin-bottom: 20px; 
+    }
+}
+
+
+
+/* Help and learn section */
 .help-section {
     display: flex;
     align-items: flex-start;
@@ -681,12 +1008,12 @@ roottech-button .button-text:hover {
 .help-image {
     flex: 1;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .help-image img {
     max-width: 100%;
     height: auto;
-    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
     display: block; 
 }
 
@@ -737,11 +1064,35 @@ roottech-button .button-text:hover {
         align-items: center;
     }
 
-    .help-image, .help-text {
+    .help-image {
         text-align: center;
-        margin-left: 0;
+    }
+
+    .help-text {
+        text-align: left; 
+        margin-left: 0;   
+        width: 80%;       
+        padding: 0 20px;  
+    }
+
+    .help-category {
+        font-size: 0.9rem;  
+    }
+
+    .help-title {
+        font-size: 1.5rem;  
+    }
+
+    .help-description {
+        font-size: 1rem;    
+    }
+
+    .help-button {
+        font-size: 0.9rem;  
+        padding: 8px 16px;  
     }
 }
+
 
 
 /* Progress section */
