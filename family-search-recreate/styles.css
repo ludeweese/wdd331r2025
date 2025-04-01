@@ -1193,17 +1193,6 @@ roottech-button .button-text:hover {
         background-color: #dddfdf; /* Gray background for large screens */
     }
 }
-
-
-
-
-
-
-
-
-    
-
-
   
 /* Links section */
 .links-section {
@@ -1323,8 +1312,6 @@ roottech-button .button-text:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
-
-
 
   /* Pre-footer section */
   .pre-footer-section {
@@ -1510,13 +1497,6 @@ roottech-button .button-text:hover {
         font-size: 0.8rem;
     }
 }
-
-
-
-
-
-
-
 
 /* Content divider */
 .content-divider {
