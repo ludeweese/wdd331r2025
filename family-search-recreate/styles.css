@@ -8,7 +8,7 @@
 body {
     font-family: sans-serif;
     text-align: center;
-    /* margin: 100px; */
+   
 }
 
 /* Header and Navigation Styles */
@@ -137,7 +137,7 @@ nav .right a.icon img:hover {
 }
 
 /* Mobile responsiveness for nav bar*/
-/* Mobile responsiveness */
+
 @media (max-width: 768px) {
     nav {
         display: flex;
@@ -172,14 +172,14 @@ nav .right a.icon img:hover {
     }
 
     /* Hamburger styles for mobile */
-    .hamburger-toggle button { /* Target the button inside the li */
+    .hamburger-toggle button { 
         display: block;
-        background: none; /* Remove background */
-        border: none; /* Remove border */
+        background: none; 
+        border: none; 
         font-size: 1.5rem;
-        font-weight: bold; /* Make the text bold */
+        font-weight: bold; 
         cursor: pointer;
-        padding: 0; /* Remove padding */
+        padding: 0; 
     }
 
     nav .right {
