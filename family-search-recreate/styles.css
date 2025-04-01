@@ -688,7 +688,6 @@ roottech-button .button-text:hover {
     }
 }
 
-
 /*family tree section*/
 .tree-section {
     display: flex;
@@ -775,9 +774,6 @@ roottech-button .button-text:hover {
     }
 }
 
-
-
-
 /*records section*/
 .records-section {
     display: flex;
@@ -843,11 +839,10 @@ roottech-button .button-text:hover {
 }
 
 /* Responsive RECORDS SECTION */
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .records-section {
         flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center content */
+        align-items: center; 
     }
 
     .records-image {
@@ -866,7 +861,6 @@ roottech-button .button-text:hover {
         padding: 0 20px; 
     }
 }
-
 
 
 /* linked section */
@@ -995,7 +989,6 @@ roottech-button .button-text:hover {
 }
 
 
-
 /* Help and learn section */
 .help-section {
     display: flex;
@@ -1093,14 +1086,11 @@ roottech-button .button-text:hover {
     }
 }
 
-
-
-/* Progress section */
 /* Progress section */
 .progress-section {
     position: relative;
     text-align: left;
-    background-color: #dddfdf; /* Gray background for large screens */
+    background-color: #dddfdf; 
     overflow: hidden;
     width: 100%;
     display: flex;
