@@ -1,4 +1,4 @@
-/* General reset */
+@charset "UTF-8";
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,6 @@ body {
    
 }
 
-/* Header and Navigation Styles */
 header {
     background-color: #fbfdfc;
     padding: 10px 20px;
@@ -24,7 +23,6 @@ nav {
     width: 100%;
 }
 
-/* Left side menu */
 nav .left {
     display: flex;
     align-items: center;
@@ -48,7 +46,6 @@ nav .left li:not(.logo) a {
     align-items: center; 
 }
 
-/* Hover effect for navigation links (excluding logo) */
 nav .left li:not(.logo) a:hover {
     background-color: #A8BFA7;
     border-radius: 5px;
@@ -60,7 +57,6 @@ nav .left .logo {
     height: 100%; 
 }
 
-/* Logo Styling (first item) */
 nav .left .logo a img {
     height: 60px; 
     width: auto; 
@@ -69,7 +65,6 @@ nav .left .logo a img {
     margin-top: -5px;
 }
 
-/* Right side icons and buttons */
 nav .right {
     display: flex;
     align-items: center;
@@ -102,7 +97,6 @@ nav .right a.icon img:hover {
     border-radius: 10px;
 }
 
-/* Button Styles */
 .sign-in-btn,
 .create-account-btn {
     color: rgb(34, 139, 178);
@@ -136,8 +130,6 @@ nav .right a.icon img:hover {
     border: 2px solid rgb(34, 139, 178);
 }
 
-/* Mobile responsiveness for nav bar*/
-
 @media (max-width: 768px) {
     nav {
         display: flex;
@@ -149,13 +141,12 @@ nav .right a.icon img:hover {
         display: none;
     }
 
-    /* Smaller logo for mobile */
+
     nav .left .logo a img {
         height: 40px;
         width: auto;
     }
 
-    /* Target icons and hamburger specifically */
     nav .right li.icon,
     nav .right li.hamburger-toggle {
         display: block !important;
@@ -170,8 +161,7 @@ nav .right a.icon img:hover {
     .create-account-btn {
         display: none;
     }
-
-    /* Hamburger styles for mobile */
+   
     .hamburger-toggle button { 
         display: block;
         background: none; 
@@ -186,8 +176,7 @@ nav .right a.icon img:hover {
         display: flex;
         align-items: center;
     }
-
-    /* Icon styles for mobile */
+    
     .icon {
         position: relative;
         display: inline-flex;
@@ -240,31 +229,29 @@ nav .right a.icon img:hover {
     }
 }
 
-/* Large View (No Changes) */
 .hamburger-toggle {
-    display: none; /* Hide hamburger button on large screens */
+    display: none; 
 }
 
-/*Icons*/
 .icon {
     position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
-    padding: 6px; /* Initial padding of the a tag */
+    padding: 6px; 
 }
 
 .icon img {
-    width: 22px !important; /* Increase icon width */
-    height: 22px!important; /* Increase icon height */
+    width: 22px !important; 
+    height: 22px!important; 
     transition: color 0.3s ease;
 }
 
 .icon:hover {
     background-color: #A8BFA7;
     border-radius: 50%;
-    padding: 10px; /* Increase padding on hover */
+    padding: 10px;
 }
 
 .icon:hover img {
@@ -297,7 +284,6 @@ nav .right a.icon img:hover {
     transition-delay: 0s;
 }
 
-/*rothtech bar*/
 .roottech-bar {
     background: linear-gradient(to right,rgb(52, 169, 247), rgb(16, 105, 169), rgb(97, 152, 235),rgb(2, 39, 93),rgb(61, 32, 105), purple,rgb(242, 116, 242), rgb(238, 17, 238));
     padding: 20px 0;
@@ -312,7 +298,7 @@ nav .right a.icon img:hover {
 }
 
 .roottech-logo {
-    height: 40px; /* Adjust logo size as needed */
+    height: 40px; 
     margin-right: 20px;
 }
 
@@ -342,7 +328,7 @@ nav .right a.icon img:hover {
 roottech-button .button-text:hover {
     color: #333; 
 }
-/* Mobile responsiveness for roottech-bar */
+
 @media (max-width: 768px) {
     .roottech-bar {
         background: linear-gradient(to right, rgb(52, 169, 247), rgb(16, 105, 169), rgb(97, 152, 235), rgb(2, 39, 93), rgb(61, 32, 105), purple, rgb(242, 116, 242), rgb(238, 17, 238));
@@ -367,7 +353,7 @@ roottech-button .button-text:hover {
     .roottech-content > div {
         display: flex;
         justify-content: space-between;
-        align-items: center; /* Vertically align logo and button */
+        align-items: center; 
         width: 100%;
         order: 2;
         margin-top: 10px;
@@ -392,7 +378,6 @@ roottech-button .button-text:hover {
     }
 }
 
-/*ROOT MOBILE*/
 @media (max-width: 768px) {
     .roottech-content {
         display: flex;
@@ -401,14 +386,12 @@ roottech-button .button-text:hover {
         text-align: center;
     }
 
-    /* Ensure text is at the top */
-    .roottech-text {
+       .roottech-text {
         font-size: 0.9rem;
         margin-bottom: 15px;
-        order: -1; /* Moves text to the top */
+        order: -1; 
     }
-
-    /* Align logo and button side by side */
+    
     .roottech-logo,
     .roottech-button {
         display: inline-block;
@@ -417,7 +400,7 @@ roottech-button .button-text:hover {
 
     .roottech-logo {
         height: 30px;
-        margin-right: 140px !important; /* Increased space between logo and button */
+        margin-right: 140px !important; 
     }
 
     .roottech-button {
@@ -429,18 +412,14 @@ roottech-button .button-text:hover {
         text-decoration: none;
         font-size: 0.9rem;
         white-space: nowrap;
-        margin-top: -25px; /* Moves the button slightly up */
+        margin-top: -25px; 
     }
 
-    /* Hide separator on mobile */
     .separator {
         display: none !important;
     }
 }
 
-
-
-/*Banner Section*/
 .banner-section {
     background-image: url('./images/banner.webp'); 
     background-size: contain; 
@@ -467,7 +446,6 @@ roottech-button .button-text:hover {
 }
 
 .search-form-container {
-    /* background-color: rgba(0, 0, 0, 0.5);  */
     padding: 30px;
     border-radius: 10px;
     margin-top: 40px;
@@ -486,7 +464,7 @@ roottech-button .button-text:hover {
 
 .search-form {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for inputs */
+    grid-template-columns: 1fr 1fr; 
     gap: 15px;
 }
 
@@ -529,10 +507,8 @@ roottech-button .button-text:hover {
     background-color: #555;
 }
 
-/*BANNER MOBILE*/
 @media (max-width: 768px) {
-    /* Remove background image on mobile */
-    .banner-section {
+      .banner-section {
         background-image: none;
         padding-top: 0;
         display: flex;
@@ -540,33 +516,29 @@ roottech-button .button-text:hover {
         align-items: center;
     }
 
-    /* Add the banner image above the content */
     .banner-section::before {
         content: "";
         display: block;
         width: 100%;
-        height: 200px; /* Adjust the height as needed */
+        height: 200px;
         background-image: url('./images/banner.webp'); 
         background-size: cover;
         background-position: center;
     }
 
-    /* Ensure the text content is centered */
     .banner-content {
         text-align: center;
         padding: 20px;
         width: 100%;
     }
 
-    /* Ensure form appears below the banner */
     .search-form-container {
         width: 100%;
         padding: 20px;
     }
 
     @media (max-width: 768px) {
-        
-            /* Stack form fields */
+              
             .search-form {
                 display: flex;
                 flex-direction: column;
@@ -577,7 +549,6 @@ roottech-button .button-text:hover {
                 width: 100%;
             }
         
-            /* Adjust the search button */
             .search-form button {
                 width: auto; 
                 padding: 10px 20px; 
@@ -587,21 +558,16 @@ roottech-button .button-text:hover {
     }
 
     @media (max-width: 768px) {
-        /* Add baby blue background */
-        .banner-content {
+             .banner-content {
             background-color: #ddedf5; 
             padding: 20px; 
             border-radius: 2px; 
         }
     
-        /* Ensure it covers full width */
         .banner-section {
-            padding: 0; /* Remove extra padding */
+            padding: 0; 
         }
     }
-    
-
-/*links*/
 
 .link-section {
     text-align: center; 
@@ -621,18 +587,16 @@ roottech-button .button-text:hover {
     white-space: nowrap; 
 }
 
-/* Hide the section on small screens */
 @media (max-width: 768px) {
     .link-section {
         display: none;
     }
 
     .section-separator {
-        display: none; /* Hides the separator */
+        display: none; 
 }
 }
 
-/*separator*/
 .section-separator {
     border: none;
     height: 1px;
@@ -641,14 +605,12 @@ roottech-button .button-text:hover {
     width: 100%; 
 }
 
-/* Hide the separator on small screens (optional) */
 @media (max-width: 768px) {
     .separator {
         display: none;
     }
 }
 
-/*free section*/
 .free-section {
     text-align: center;
     padding-bottom: 50px;
@@ -673,8 +635,7 @@ roottech-button .button-text:hover {
     text-decoration: underline;
 }
 @media (max-width: 768px) {
-    /* Free section title and text */
-    .free-title {
+       .free-title {
         font-size: 1.5rem; 
         text-align: center; 
     }
@@ -684,8 +645,6 @@ roottech-button .button-text:hover {
         text-align: center; 
     }
 }
-
-/*family tree section*/
 .tree-section {
     display: flex;
     align-items: flex-start; 
@@ -751,7 +710,7 @@ roottech-button .button-text:hover {
 
 @media (max-width: 768px) {
     .tree-section {
-        flex-direction: column-reverse; /* Reverse the order, image comes first */
+        flex-direction: column-reverse; 
         align-items: center; 
     }
 
@@ -771,7 +730,6 @@ roottech-button .button-text:hover {
     }
 }
 
-/*records section*/
 .records-section {
     display: flex;
     align-items: flex-start;
@@ -788,8 +746,7 @@ roottech-button .button-text:hover {
 .records-image img {
     max-width: 100%;
     height: auto;
-    /* box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); */
-}
+   }
 
 .records-text {
     flex: 1;
@@ -835,10 +792,9 @@ roottech-button .button-text:hover {
     color: black;
 }
 
-/* Responsive RECORDS SECTION */
 @media (max-width: 768px) {
     .records-section {
-        flex-direction: column; /* Stack elements vertically */
+        flex-direction: column; 
         align-items: center; 
     }
 
@@ -859,7 +815,6 @@ roottech-button .button-text:hover {
     }
 }
 
-/* linked section */
 .image-links-section {
     text-align: center;
     padding: 50px 0;
@@ -890,7 +845,6 @@ roottech-button .button-text:hover {
     white-space: nowrap;
 }
 
-/* Responsive adjustments for small view */
 @media (max-width: 768px) {
     .image-links-section {
         flex-direction: column;  
@@ -908,7 +862,6 @@ roottech-button .button-text:hover {
     }
 }
 
-/* begin Section */
 .begin-section {
     position: relative;
     text-align: left;
@@ -965,10 +918,9 @@ roottech-button .button-text:hover {
     object-fit: contain;
 }
 
-/* Responsive adjustments for small view */
 @media (max-width: 768px) {
     .begin-section {
-        flex-direction: column-reverse; /* Reverse the order: image on top */
+        flex-direction: column-reverse; 
         text-align: center; 
     }
 
@@ -983,7 +935,7 @@ roottech-button .button-text:hover {
     }
 }
 
-/* Help and learn section */
+
 .help-section {
     display: flex;
     align-items: flex-start;
@@ -1044,7 +996,6 @@ roottech-button .button-text:hover {
     background-color: lightgray;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .help-section {
         flex-direction: column;
@@ -1080,7 +1031,6 @@ roottech-button .button-text:hover {
     }
 }
 
-/* Progress section */
 .progress-section {
     position: relative;
     text-align: left;
@@ -1093,7 +1043,6 @@ roottech-button .button-text:hover {
     min-height: 400px;
 }
 
-/* Content styling */
 .progress-content {
     max-width: 500px;
     margin: 0 20px 0 0;
@@ -1124,33 +1073,29 @@ roottech-button .button-text:hover {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Large screen image */
 .progress-image {
-    display: block; /* Show on large screens */
+    display: block; 
     max-width: 60%;
     height: auto;
 }
 
 .mobile-image {
-    display: none; /* Hide on large screens */
+    display: none; 
 }
 
-/* Hide mobile message by default */
 .mobile-message {
-    display: none; /* Hide on large screens */
+    display: none; 
 }
 
-/* Mobile view responsive styles */
 @media (max-width: 768px) {
     .progress-section {
         flex-direction: column;
         text-align: center;
-        background-color: transparent; /* No background on mobile */
+        background-color: transparent; 
     }
 
-    /* Mobile text section */
-    .mobile-message {
-        display: block; /* Show mobile message on small screens */
+       .mobile-message {
+        display: block; 
         font-size: 1rem;
         max-width: 80%;
         margin: 10px auto;
@@ -1167,28 +1112,25 @@ roottech-button .button-text:hover {
         margin-top: 5px;
     }
 
-    /* Show mobile image */
-    .mobile-image {
-        display: block; /* Show mobile image on small screens */
+       .mobile-image {
+        display: block; 
         width: 80%;
         max-width: 250px;
         margin-top: 10px;
     }
-
-    /* Hide large screen image */
+  
     .progress-image {
-        display: none; /* Hide large screen image on mobile */
+        display: none; 
     }
 }
 
-/* Large screens (above 768px) */
 @media (min-width: 769px) {
     .progress-section {
-        background-color: #dddfdf; /* Gray background for large screens */
+        background-color: #dddfdf; 
     }
 }
-  
-/* Links section */
+ 
+
 .links-section {
     padding: 50px 0;
     background-color: white;
@@ -1237,7 +1179,6 @@ roottech-button .button-text:hover {
       margin-left: 5px;
   }
   
- /* Responsive adjustments (Small View Styles ONLY - ADDITIONS) */
 @media (max-width: 768px) {
     .links-container {
         flex-direction: column;
@@ -1284,8 +1225,6 @@ roottech-button .button-text:hover {
         transform: translateY(-50%) rotate(180deg); 
     }
 }
-
-  /*download section*/
   .download-section {
     padding: 30px 0;
     text-align: center;
@@ -1306,8 +1245,7 @@ roottech-button .button-text:hover {
     transform: scale(1.1);
     cursor: pointer;
   }
-
-  /* Pre-footer section */
+  
   .pre-footer-section {
     display: flex;
     align-items: flex-start;
@@ -1372,7 +1310,6 @@ roottech-button .button-text:hover {
     background-color: lightgray;
   }
   
-  /* Responsive adjustments */
   @media (max-width: 768px) {
     .pre-footer-section {
       flex-direction: column;
@@ -1389,7 +1326,6 @@ roottech-button .button-text:hover {
     }
   }
 
- /* Main footer */
 .main-footer {
     background-color: lightgray;
     padding: 10px 0;
@@ -1436,8 +1372,7 @@ roottech-button .button-text:hover {
     height: 80px;
     display: inline-block;
   }
-  
-  /* RESPONSIVE FOOTER */
+    
 @media (max-width: 768px) {
     .main-footer {
         flex-direction: column;
@@ -1448,7 +1383,7 @@ roottech-button .button-text:hover {
     }
 
     .footer-right {
-        order: -1; /* Moves the logo to the top */
+        order: -1; 
         width: 100%;
         display: flex;
         justify-content: center;
@@ -1490,11 +1425,8 @@ roottech-button .button-text:hover {
         font-size: 0.8rem;
     }
 }
-
-/* Content divider */
 .content-divider {
     border: 1px solid #c7c6c6;
     width: 100%; 
     margin: 20px 0; 
-}
-
+}/*# sourceMappingURL=fs.css.map */
