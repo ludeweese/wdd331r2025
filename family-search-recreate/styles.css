@@ -1096,34 +1096,36 @@ roottech-button .button-text:hover {
 
 
 /* Progress section */
+/* Progress section */
 .progress-section {
     position: relative;
     text-align: left;
-    background-color: #dddfdf; 
+    background-color: #dddfdf; /* Gray background for large screens */
     overflow: hidden;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 400px;
-  }
-  
-  .progress-content {
+}
+
+/* Content styling */
+.progress-content {
     max-width: 500px;
     margin: 0 20px 0 0;
     padding: 20px;
     position: relative;
     z-index: 1;
-  }
-  
-  .progress-title {
+}
+
+.progress-title {
     font-size: 2rem;
     font-weight: bold;
-    color: #202121; 
+    color: #202121;
     margin-bottom: 20px;
-  }
-  
-  .progress-button {
+}
+
+.progress-button {
     background-color: black;
     color: white;
     padding: 10px 20px;
@@ -1132,70 +1134,84 @@ roottech-button .button-text:hover {
     font-size: 1rem;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
-  }
-  
-  .progress-button:hover {
-    background-color: rgba(0, 0, 0, 0.7); 
-  }
-  
-  .progress-image {
-    position: relative;
+}
+
+.progress-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Large screen image */
+.progress-image {
+    display: block; /* Show on large screens */
     max-width: 60%;
     height: auto;
-    z-index: 0;
-  }
-
-
-  /* Responsive Progress section */
-
-/* Hide the mobile message by default */
-.mobile-message {
-    display: none;
 }
 
-/* Show the mobile message on small screens */
+.mobile-image {
+    display: none; /* Hide on large screens */
+}
+
+/* Hide mobile message by default */
+.mobile-message {
+    display: none; /* Hide on large screens */
+}
+
+/* Mobile view responsive styles */
 @media (max-width: 768px) {
-    /* Display the mobile message */
+    .progress-section {
+        flex-direction: column;
+        text-align: center;
+        background-color: transparent; /* No background on mobile */
+    }
+
+    /* Mobile text section */
     .mobile-message {
-        display: block;
-        margin-top: 20px;
-    }
-
-    /* "Working on mobile?" text */
-    .mobile-message::before {
-        content: "Working on mobile?";
-        display: block;
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin-top: 20px;
-    }
-
-    /* The description text */
-    .mobile-message::after {
-        content: "The FamilySearch Tree app makes it easy to add to, edit, or share your own family's history anywhere you can take a phone or tablet.";
-        display: block;
-        font-weight: normal;
+        display: block; /* Show mobile message on small screens */
         font-size: 1rem;
-        margin-top: 10px;
+        max-width: 80%;
+        margin: 10px auto;
     }
 
-    /* The image */
-    .mobile-message {
-        background: url('./images/mobile.png') no-repeat center;
-        background-size: contain;
+    .mobile-message strong {
+        font-size: 1.2rem;
+        font-weight: bold;
+        display: block;
+    }
+
+    .mobile-message p {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    /* Show mobile image */
+    .mobile-image {
+        display: block; /* Show mobile image on small screens */
         width: 80%;
         max-width: 250px;
-        height: 120px;
         margin-top: 10px;
+    }
+
+    /* Hide large screen image */
+    .progress-image {
+        display: none; /* Hide large screen image on mobile */
+    }
+}
+
+/* Large screens (above 768px) */
+@media (min-width: 769px) {
+    .progress-section {
+        background-color: #dddfdf; /* Gray background for large screens */
     }
 }
 
 
 
-    /* Hide image on mobile */
-    .progress-image {
-        display: none;
-    }
+
+
+
+
+
+    
 
 
   
@@ -1264,22 +1280,22 @@ roottech-button .button-text:hover {
         display: block;
         cursor: pointer;
         position: relative;
-        margin: 0; /* Remove top and bottom spacing */
-        padding: 10px 0; /* Add padding for visual separation */
-        border-bottom: 1px solid #ccc; /* Add horizontal line */
-        transition: background-color 0.3s ease; /* Add transition for hover effect */
+        margin: 0; 
+        padding: 10px 0; 
+        border-bottom: 1px solid #ccc; 
+        transition: background-color 0.3s ease; 
     }
 
     .column-title:hover {
-        background-color: #f0f0f0; /* Gray hover effect */
+        background-color: #f0f0f0; 
     }
 
     .column-title::after {
         content: "▼";
         position: absolute;
         right: 0;
-        top: 50%; /* Center the arrow vertically */
-        transform: translateY(-50%); /* Center the arrow vertically */
+        top: 50%; 
+        transform: translateY(-50%); 
         transition: transform 0.3s ease;
     }
 
@@ -1292,7 +1308,7 @@ roottech-button .button-text:hover {
     }
 
     .links-column:target .column-title::after {
-        transform: translateY(-50%) rotate(180deg); /* Rotate the arrow */
+        transform: translateY(-50%) rotate(180deg); 
     }
 }
 
@@ -1319,26 +1335,14 @@ roottech-button .button-text:hover {
   }
 
 
-  /* Responsive download section */
-/* @media (max-width: 768px) {
-    
-    .download-section::before {
-        content: "";
-        background-image: url("./images/mobile.png"); 
-        background-size: cover;
-        background-position: center;
-        height: 200px;
-        display: block;
-        margin-top: 20px;
-    }
-} */
+
   /* Pre-footer section */
   .pre-footer-section {
     display: flex;
     align-items: flex-start;
     padding-top: 30px;
     padding-right: 0;
-    padding-bottom: 5px; /* Reduced bottom padding */
+    padding-bottom: 5px; 
     padding-left: 0;
     justify-content: space-between;
     max-width: 1200px;
@@ -1443,7 +1447,7 @@ roottech-button .button-text:hover {
   }
   
   .footer-terms span {
-    text-align: left; /* Ensure left alignment for each line */
+    text-align: left; 
   }
   
   .footer-link {
@@ -1494,8 +1498,8 @@ roottech-button .button-text:hover {
         justify-content: center;
         text-align: center;
         max-width: 90%;
-        margin: 0 auto; /* Centers the text block */
-        padding-left: 0; /* Remove excess padding */
+        margin: 0 auto; 
+        padding-left: 0; 
     }
 
     .footer-terms {
@@ -1503,16 +1507,15 @@ roottech-button .button-text:hover {
         max-width: 90%;
         width: 100%;
         text-align: center;
-        padding-left: 0 !important; /* Remove unnecessary left padding */
-    }
+        padding-left: 0 !important; }
 
     .footer-terms span {
-        display: inline; /* Makes text flow like a paragraph */
+        display: inline; 
         text-align: center;
     }
 
     .footer-link {
-        display: inline; /* Keeps links inline */
+        display: inline; 
         margin: 0 5px;
         font-size: 0.8rem;
     }
